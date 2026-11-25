@@ -9,11 +9,11 @@
 <body>
     <h1>Sistema Escolar</h1>
     <h2>Alunos</h2>
-    <a href="gravar_aluno.php">Gravar aluno</a> |
-    <a href="listar_alunos.php">Listar alunos</a>
+    <a href="modules/alunos/gravar_aluno.php">Gravar aluno</a> |
+    <a href="modules/alunos/listar_alunos.php">Listar alunos</a>
     <h2>Professores</h2>
-    <a href="gravar_professor.php">Gravar professor</a> |
-    <a href="listar_professores.php">Listar professores</a>
+    <a href="modules/professores/gravar_professor.php">Gravar professor</a> |
+    <a href="modules/professores/listar_professores.php">Listar professores</a>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 <?php
-require_once "config/conexao.php";
-require_once "include/functions.php";
+require_once __DIR__ . "/../../config/conexao.php";
+require_once __DIR__ . "/../../include/functions.php";
 // Recebe o ID pela URL e converte para inteiro. 
 $id_professor = (int)($_GET["id"] ?? 0);
 // Se o formulário foi enviado, atualiza os dados. 
@@ -23,7 +23,7 @@ if (!$professor) {
     die("Professor não encontrado.");
 }
 ?>
-<h1>Editar aluno</h1>
+<h1>Editar professor</h1>
 <form method="POST">
     Nome: <input name="nome" value="<?= htmlspecialchars($professor["nome"]) ?>" required><br>
     CPF: <input name="cpf" value="" placeholder="Digite novamente o CPF" required><br>

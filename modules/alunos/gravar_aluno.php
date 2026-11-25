@@ -1,7 +1,7 @@
 <?php
 // Inclui a conexão e as funções. 
-require_once "config/conexao.php";
-require_once "include/functions.php";
+require_once __DIR__ . "/../../config/conexao.php";
+require_once __DIR__ . "/../../include/functions.php";
 // Verifica se o formulário foi enviado. 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Recebe os dados enviados pelo formulário. 
@@ -27,4 +27,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     Senha: <input type="password" name="senha" required><br><br>
     <button type="submit">Gravar aluno</button>
 </form>
-<a href="index.php">Voltar ao início</a>
+<a href="../../index.php">Voltar ao início</a>

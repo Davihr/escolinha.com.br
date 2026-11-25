@@ -1,6 +1,6 @@
 <?php
-require_once "config/conexao.php";
-require_once "include/functions.php";
+require_once __DIR__ . "/../../config/conexao.php";
+require_once __DIR__ . "/../../include/functions.php";
 // Solicita a lista de professores ao arquivo de funções. 
 $resultado = listar_professores($conexao);
 ?>
@@ -32,4 +32,4 @@ $resultado = listar_professores($conexao);
         </tr>
     <?php } ?>
 </table>
-<a href="index.php">Voltar ao início</a>
+<a href="../../index.php">Voltar ao início</a>

@@ -8,7 +8,7 @@ CREATE TABLE alunos(
     id_aluno INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR (100) NOT NULL,
     cpf CHAR(32),
-    curso VARHCAR(100) NOT NULL,
+    curso VARCHAR(100) NOT NULL,
     login VARCHAR(50) NOT NULL UNIQUE,
     senha CHAR(32) NOT NULL
 );
@@ -21,4 +21,3 @@ CREATE TABLE professores(
     login VARCHAR(50) NOT NULL UNIQUE,
     senha CHAR(32) NOT NULL
 );
-
