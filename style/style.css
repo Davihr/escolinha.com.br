@@ -1,0 +1,18 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+
+}
+header{
+    font-size: 60px;
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}

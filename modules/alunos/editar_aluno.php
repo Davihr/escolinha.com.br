@@ -26,7 +26,7 @@ if (!$aluno) {
 <h1>Editar aluno</h1>
 <form method="POST">
     Nome: <input name="nome" value="<?= htmlspecialchars($aluno["nome"]) ?>" required><br>
-    CPF: <input name="cpf" value="" placeholder="Digite novamente o CPF" required><br>
+    CPF: <input name="cpf" value="<?= htmlspecialchars($aluno["cpf"]) ?>" placeholder="Digite novamente o CPF" required><br>
     Curso: <input name="curso" value="<?= htmlspecialchars($aluno["curso"]) ?>" required><br> Login: <input name="login" value="<?= htmlspecialchars($aluno["login"]) ?>" required><br> Nova senha: <input type="password" name="senha"><br>
     <small>Deixe a senha vazia para manter a atual.</small><br>
     <button type="submit">Salvar alterações</button>
