@@ -2,21 +2,31 @@
 require_once __DIR__ . "/../../config/conexao.php";
 require_once __DIR__ . "/../../include/functions.php";
 // Solicita a lista de professores ao arquivo de funções. 
-$resultado = listar_professores($conexao);
+// Nova consulta: traz os professores e o campo foto.
+$resultado = listar_professores_com_foto($conexao);
 ?>
 <h1>Professores cadastrados</h1>
 <a href="gravar_professor.php">Cadastrar novo professor</a>
 <table border="1" cellpadding="8">
     <tr>
+        <th>Foto</th>
         <th>ID</th>
         <th>Nome</th>
         <th>CPF (MD5)</th>
         <th>Curso</th>
         <th>Login</th>
-        <th>Ações</th>
     </tr>
     <?php while ($professor = mysqli_fetch_assoc($resultado)) { ?>
         <tr>
+            <td>
+                <?php if (!empty($professor["foto"])) { ?>
+                    <img src="uploads/<?= htmlspecialchars($professor["foto"]) ?>"
+                        width="70" height="70" style="object-fit:cover;"
+                        alt="Foto do professor">
+                <?php } else { ?>
+                    Sem foto
+                <?php } ?>
+            </td>
             <td><?= $professor["id_professor"] ?></td>
             <td><?= htmlspecialchars($professor["nome"]) ?></td>
             <td><?= htmlspecialchars($professor["cpf"]) ?></td>

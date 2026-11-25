@@ -21,3 +21,9 @@ CREATE TABLE professores(
     login VARCHAR(50) NOT NULL UNIQUE,
     senha CHAR(32) NOT NULL
 );
+
+USE dbescola;
+ALTER TABLE alunos
+ADD COLUMN foto VARCHAR(255) NULL;
+ALTER TABLE professores
+ADD COLUMN foto VARCHAR(255) NULL;
